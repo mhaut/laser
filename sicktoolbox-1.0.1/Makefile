@@ -59,8 +59,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = x86_64-unknown-linux-gnu
-host_triplet = x86_64-unknown-linux-gnu
+build_triplet = i686-pc-linux-gnu
+host_triplet = i686-pc-linux-gnu
 DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/aminclude.am \
 	$(top_srcdir)/c++/drivers/base/src/SickConfig.hh.in \
@@ -107,13 +107,13 @@ DIST_ARCHIVES = $(distdir).tar.gz
 GZIP_ENV = --best
 distuninstallcheck_listfiles = find . -type f -print
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/mario/Descargas/sicktoolbox-1.0.1/misc/missing --run aclocal-1.10
-AMTAR = ${SHELL} /home/mario/Descargas/sicktoolbox-1.0.1/misc/missing --run tar
+ACLOCAL = ${SHELL} /home/mario/software/laser/sicktoolbox-1.0.1/misc/missing --run aclocal-1.10
+AMTAR = ${SHELL} /home/mario/software/laser/sicktoolbox-1.0.1/misc/missing --run tar
 AR = ar
-AUTOCONF = ${SHELL} /home/mario/Descargas/sicktoolbox-1.0.1/misc/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/mario/Descargas/sicktoolbox-1.0.1/misc/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/mario/Descargas/sicktoolbox-1.0.1/misc/missing --run automake-1.10
-AWK = gawk
+AUTOCONF = ${SHELL} /home/mario/software/laser/sicktoolbox-1.0.1/misc/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/mario/software/laser/sicktoolbox-1.0.1/misc/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/mario/software/laser/sicktoolbox-1.0.1/misc/missing --run automake-1.10
+AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
@@ -133,21 +133,21 @@ DX_DOT = /usr/bin/dot
 DX_DOXYGEN = /usr/bin/doxygen
 DX_DVIPS = 
 DX_EGREP = /bin/egrep
-DX_ENV =  SRCDIR='.' PROJECT='sicktoolbox' DOCDIR='doxygen-doc' VERSION='1.0.1' PERL_PATH='/usr/bin/perl' HAVE_DOT='YES' DOT_PATH='/usr/bin' GENERATE_MAN='YES' GENERATE_RTF='NO' GENERATE_XML='NO' GENERATE_HTMLHELP='NO' GENERATE_CHI='NO' GENERATE_HTML='YES' GENERATE_LATEX='NO'
+DX_ENV =  SRCDIR='.' PROJECT='sicktoolbox' DOCDIR='doxygen-doc' VERSION='1.0.1' PERL_PATH='/usr/bin/perl' HAVE_DOT='YES' DOT_PATH='/usr/bin' GENERATE_MAN='YES' GENERATE_RTF='NO' GENERATE_XML='NO' GENERATE_HTMLHELP='NO' GENERATE_CHI='NO' GENERATE_HTML='YES' GENERATE_LATEX='YES'
 DX_FLAG_chi = 0
 DX_FLAG_chm = 0
 DX_FLAG_doc = 1
 DX_FLAG_dot = 1
 DX_FLAG_html = 1
 DX_FLAG_man = 1
-DX_FLAG_pdf = 0
+DX_FLAG_pdf = 1
 DX_FLAG_ps = 0
 DX_FLAG_rtf = 0
 DX_FLAG_xml = 0
 DX_HHC = 
 DX_LATEX = 
-DX_MAKEINDEX = 
-DX_PDFLATEX = 
+DX_MAKEINDEX = /usr/bin/makeindex
+DX_PDFLATEX = /usr/bin/pdflatex
 DX_PERL = /usr/bin/perl
 DX_PROJECT = sicktoolbox
 ECHO = echo
@@ -170,7 +170,7 @@ LIBS =
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/mario/Descargas/sicktoolbox-1.0.1/misc/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/mario/software/laser/sicktoolbox-1.0.1/misc/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = sicktoolbox
@@ -185,15 +185,15 @@ PTHREAD_CFLAGS = -pthread
 PTHREAD_LIBS = 
 RANLIB = ranlib
 SET_MAKE = 
-SHELL = /bin/bash
+SHELL = /bin/sh
 SICK_LD_SRC_DIR = sickld-1.0
 SICK_LMS_SRC_DIR = sicklms-1.0
 STRIP = strip
 VERSION = 1.0.1
-abs_builddir = /home/mario/Descargas/sicktoolbox-1.0.1
-abs_srcdir = /home/mario/Descargas/sicktoolbox-1.0.1
-abs_top_builddir = /home/mario/Descargas/sicktoolbox-1.0.1
-abs_top_srcdir = /home/mario/Descargas/sicktoolbox-1.0.1
+abs_builddir = /home/mario/software/laser/sicktoolbox-1.0.1
+abs_srcdir = /home/mario/software/laser/sicktoolbox-1.0.1
+abs_top_builddir = /home/mario/software/laser/sicktoolbox-1.0.1
+abs_top_srcdir = /home/mario/software/laser/sicktoolbox-1.0.1
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 ac_ct_F77 = 
@@ -204,11 +204,11 @@ am__quote =
 am__tar = ${AMTAR} chof - "$$tardir"
 am__untar = ${AMTAR} xf -
 bindir = ${exec_prefix}/bin
-build = x86_64-unknown-linux-gnu
+build = i686-pc-linux-gnu
 build_alias = 
-build_cpu = x86_64
+build_cpu = i686
 build_os = linux-gnu
-build_vendor = unknown
+build_vendor = pc
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
@@ -216,15 +216,15 @@ docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
 have_gnuplot = no
-host = x86_64-unknown-linux-gnu
+host = i686-pc-linux-gnu
 host_alias = 
-host_cpu = x86_64
+host_cpu = i686
 host_os = linux-gnu
-host_vendor = unknown
+host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = $(SHELL) /home/mario/Descargas/sicktoolbox-1.0.1/misc/install-sh
+install_sh = $(SHELL) /home/mario/software/laser/sicktoolbox-1.0.1/misc/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -252,9 +252,9 @@ DX_CLEAN_MAN = doxygen-doc/man
 #DX_CLEAN_XML = doxygen-doc/xml
 #DX_CLEAN_PS = doxygen-doc/sicktoolbox.ps
 #DX_PS_GOAL = doxygen-ps
-#DX_CLEAN_PDF = doxygen-doc/sicktoolbox.pdf
-#DX_PDF_GOAL = doxygen-pdf
-#DX_CLEAN_LATEX = doxygen-doc/latex
+DX_CLEAN_PDF = doxygen-doc/sicktoolbox.pdf
+DX_PDF_GOAL = doxygen-pdf
+DX_CLEAN_LATEX = doxygen-doc/latex
 DX_CLEANFILES = \
     doxygen-doc/sicktoolbox.tag \
     -r \
@@ -750,22 +750,22 @@ uninstall-am:
 #	done; \
 #	$(DX_DVIPS) -o ../sicktoolbox.ps refman.dvi
 
-#doxygen-pdf: doxygen-doc/sicktoolbox.pdf
+doxygen-pdf: doxygen-doc/sicktoolbox.pdf
 
-#doxygen-doc/sicktoolbox.pdf: doxygen-doc/sicktoolbox.tag
-#	cd doxygen-doc/latex; \
-#	rm -f *.aux *.toc *.idx *.ind *.ilg *.log *.out; \
-#	$(DX_PDFLATEX) refman.tex; \
-#	$(DX_MAKEINDEX) refman.idx; \
-#	$(DX_PDFLATEX) refman.tex; \
-#	countdown=5; \
-#	while $(DX_EGREP) 'Rerun (LaTeX|to get cross-references right)' \
-#	                  refman.log > /dev/null 2>&1 \
-#	   && test $$countdown -gt 0; do \
-#	    $(DX_PDFLATEX) refman.tex; \
-#	    countdown=`expr $$countdown - 1`; \
-#	done; \
-#	mv refman.pdf ../sicktoolbox.pdf
+doxygen-doc/sicktoolbox.pdf: doxygen-doc/sicktoolbox.tag
+	cd doxygen-doc/latex; \
+	rm -f *.aux *.toc *.idx *.ind *.ilg *.log *.out; \
+	$(DX_PDFLATEX) refman.tex; \
+	$(DX_MAKEINDEX) refman.idx; \
+	$(DX_PDFLATEX) refman.tex; \
+	countdown=5; \
+	while $(DX_EGREP) 'Rerun (LaTeX|to get cross-references right)' \
+	                  refman.log > /dev/null 2>&1 \
+	   && test $$countdown -gt 0; do \
+	    $(DX_PDFLATEX) refman.tex; \
+	    countdown=`expr $$countdown - 1`; \
+	done; \
+	mv refman.pdf ../sicktoolbox.pdf
 
 .PHONY: doxygen-run doxygen-doc $(DX_PS_GOAL) $(DX_PDF_GOAL)
 
