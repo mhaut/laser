@@ -1,1 +1,0 @@
-/home/mario/robocomp/components/robocomp-robolab/components/sickLaser2/build/src/CMakeFiles/sickLaser.dir
